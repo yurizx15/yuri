@@ -1,39 +1,64 @@
 #include <stdio.h>
 
-int main(){
+int main() {
+    int movimentotorre = 5; // número de casas pra mover
     
-    int  movimentotorre = 5; //numeros de casas pra mover
-     
-    //simulação do movimento da torre em (for)
-
-    printf("movimento da TORRE:\n");
-    for (int i = 1; i <= movimentotorre; i++){  
-    printf("direita (casa %d)\n", i);
-}
+    // Simulação do movimento da Torre (for)
+    printf("Movimento da TORRE:\n");
+    for (int i = 1; i <= movimentotorre; i++) {
+        printf("Direita (casa %d)\n", i);
+    }
     printf("\n");
 
-
-    int movimentobispo = 5; //numero de casas pra mover
-    int i = 1; //contador   
-    //simulação do movimento do bispo em (while)
-
-    printf("movimento do BISPO:\n");
-    while (i <= movimentobispo){
-       printf("cima ,direita (casa  %d)\n", i);
-       i++; 
+    // Simulação do movimento do Bispo (while)
+    int movimentobispo = 5;
+    int i = 1; // contador
+    printf("Movimento do BISPO:\n");
+    while (i <= movimentobispo) {
+        printf("Cima, Direita (casa %d)\n", i);
+        i++;
     }
-     printf("\n");
+    printf("\n");
 
-    
-    // Simulação da RAINHA (do-while)
-    int movimentoRainha = 8; // número de casas para mover
-    int j = 1; // contador
+    // Simulação do movimento da Rainha (do-while)
+    int movimentoRainha = 8;
+    int j = 1;
     printf("Movimento da RAINHA:\n");
     do {
         printf("Esquerda (casa %d)\n", j);
         j++;
     } while (j <= movimentoRainha);
+    printf("\n");
+
+    // ==============================
+    // 🐴 MOVIMENTO DO CAVALO (loops aninhados)
+    // ==============================
+    
+    // O cavalo se move 2 casas para BAIXO e 1 casa para a ESQUERDA.
+    // Vamos usar um loop FOR para o movimento para baixo
+    // e um loop WHILE aninhado para o movimento para a esquerda.
+    
+    int movimentoBaixo = 2;   // número de casas para baixo
+    int movimentoEsquerda = 1; // número de casas para esquerda
+
+    printf("Movimento do CAVALO:\n");
+
+    // Loop principal (para movimento para baixo)
+    for (int linha = 1; linha <= movimentoBaixo; linha++) {
+        printf("Baixo (casa %d)\n", linha);
+    }
+
+    // Loop aninhado (para movimento para esquerda)
+    int coluna = 1;
+    while (coluna <= movimentoEsquerda) {
+        printf("Esquerda (casa %d)\n", coluna);
+        coluna++;
+    }
+
+    // Fim da simulação
+    printf("\nFim da simulação!\n");
 
     return 0;
 }
+
 
